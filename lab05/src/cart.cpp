@@ -13,3 +13,13 @@ double Cart::total()
     }
     return sum;
 }
+
+double Cart::discount(double discountAmount)
+{
+    double totalAmount = total();
+
+    if (totalAmount > discountAmount)
+        return totalAmount - discountAmount;
+    else
+        return 0;
+}
